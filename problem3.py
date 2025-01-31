@@ -1,0 +1,10 @@
+motor_2.set_velocity(35,RPM);
+servo_a.set_position(-32, DEGREES);
+wait(1,SECONDS);
+motor_2.spin_to_position(225);
+wait(3,SECONDS);
+servo_a.set_position(12,DEGREES);
+wait(2,SECONDS);
+motor_2.set_velocity(40,RPM);
+motor_2.spin_to_position(80);
+servo_a.set_position(-53,DEGREES);
