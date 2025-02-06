@@ -1,3 +1,28 @@
+#region VEXcode Generated Robot Configuration
+from vex import *
+import urandom
+
+# Brain should be defined by default
+brain=Brain()
+optical_2 = Optical(Ports.PORT2)
+
+
+wait(30, MSEC)
+
+
+def initializeRandomSeed():
+    wait(100, MSEC)
+    random = brain.battery.voltage(MV) + brain.battery.current(CurrentUnits.AMP) * 100 + brain.timer.system_high_res()
+    urandom.seed(int(random))
+      
+initializeRandomSeed()
+
+
+wait(200, MSEC)
+
+print("\033[2J")
+
+#endregion VEXcode Generated Robot Configuration
 # Begin project code
 # Print all Optical sensing values to the screen in an infinite loop
 while True:
